@@ -1,0 +1,26 @@
+.image-container {
+  position: relative; /* Ensures that the link can be positioned relative to this container */
+  display: inline-block;
+}
+
+.image-container img {
+  display: block; /* Prevents spaces under the image */
+}
+
+.hover-link {
+  position: absolute; /* Allows the link to be positioned over the image */
+  top: 50%; /* Centers the link vertically */
+  left: 50%; /* Centers the link horizontally */
+  transform: translate(-50%, -50%); /* Corrects the centering */
+  background-color: rgba(0, 0, 0, 0.5); /* Adds a background with transparency */
+  color: white; /* Sets the text color */
+  padding: 10px 20px; /* Adds padding around the link */
+  text-decoration: none; /* Removes the underline from the link */
+  border-radius: 5px; /* Rounds the corners */
+  opacity: 0; /* Initially hides the link */
+  transition: opacity 0.3s ease; /* Smooth transition for showing the link */
+}
+
+.image-container:hover .hover-link {
+  opacity: 1; /* Shows the link when hovering over the container */
+}
